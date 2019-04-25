@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lifeathon</string>
+    <string name="logo">logo</string>
+    <string name="project_1">Project 1</string>
+    <string name="project_2">Project 2</string>
+    <string name="project_3">Project 3</string>
+    <string name="project_4">Project 4</string>
+    <string name="project_title">Project Title 1</string>
+    <string name="team_memers_and_college_info">Team Memers and College info</string>
+    <string name="todo">TODO</string>
+    <string name="project_title_string_project_2">Project Title 2</string>
+    <string name="blah">An intelligent assistant for fruitful cultivation is a need of farming community. Design a bot that can plough, water, and plant saplings on barren lands. The Croftbot should be able to measure the pH, NPK, moisture content etc in order to provide a sundry of nutrients to make the land arable.</string>
+    <string name="project_title_string_project_3">Project Title 3</string>
+    <string name="project_title_string_project_4">Project Title 4</string>
+    <string name="croftbot_string_project_2">CroftBot</string>
+    <string name="aries">Kamalanathan N\n
+kamal.rkara@gmail.com\n
+8547106410\n
+MES College of Engineering, Kuttippuram</string>
+</resources>
