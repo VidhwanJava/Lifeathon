@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -24,31 +25,32 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
     private Animator mCurrentAnimatorEffect;
     private int mShortAnimationDurationEffect;
-    Button bt1,bt2,bt3,bt4;
-    ScrollView p1,p2,p3,p4;
+    Button bt1, bt2, bt3, bt4;
+    ScrollView p1, p2, p3, p4;
     View current;
     VideoView vview;
-    MediaController mediac;
+
+        MediaController mediac;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS,WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS, WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
         setContentView(R.layout.activity_main);
-        bt1=findViewById(R.id.bt1);
-        bt2=findViewById(R.id.bt2);
-        bt3=findViewById(R.id.bt3);
-        bt4=findViewById(R.id.bt4);
-        p1=findViewById(R.id.p1);
-        p2=findViewById(R.id.p2);
-        p3=findViewById(R.id.p3);
-        p4=findViewById(R.id.p4);
-        current=p1;
-        vview = (VideoView)findViewById(R.id.testved);
+        bt1 = findViewById(R.id.bt1);
+        bt2 = findViewById(R.id.bt2);
+        bt3 = findViewById(R.id.bt3);
+        bt4 = findViewById(R.id.bt4);
+        p1 = findViewById(R.id.p1);
+        p2 = findViewById(R.id.p2);
+        p3 = findViewById(R.id.p3);
+        p4 = findViewById(R.id.p4);
+        current = p1;
+        vview = (VideoView)findViewById(R.id.videoView);
         mediac= new MediaController(this);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.test;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.lyza_ved;
         vview.setVideoURI(Uri.parse(path));
         vview.setMediaController(mediac);
         mediac.setAnchorView(vview);
@@ -65,7 +67,43 @@ public class MainActivity extends AppCompatActivity {
 
         mShortAnimationDurationEffect = getResources().getInteger(
                 android.R.integer.config_shortAnimTime);
+
+        final View thumbImageView1 = findViewById(R.id.img2);
+        thumbImageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zoomImageFromThumb(thumbImageView1, R.drawable.par);
+            }
+        });
+
+        mShortAnimationDurationEffect = getResources().getInteger(
+                android.R.integer.config_shortAnimTime);
+
+        final View thumbImageView2 = findViewById(R.id.imageView2);
+        thumbImageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zoomImageFromThumb(thumbImageView2, R.drawable.rubber);
+            }
+        });
+
+        mShortAnimationDurationEffect = getResources().getInteger(
+                android.R.integer.config_shortAnimTime);
+
+
+        final View thumbImageView3 = findViewById(R.id.im4);
+        thumbImageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zoomImageFromThumb(thumbImageView3, R.drawable.lyza);
+            }
+        });
+
+        mShortAnimationDurationEffect = getResources().getInteger(
+                android.R.integer.config_shortAnimTime);
     }
+
+
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void zoomImageFromThumb(final View thumbView, int imageResId) {
@@ -187,19 +225,21 @@ public class MainActivity extends AppCompatActivity {
         current.setVisibility(View.GONE);
         p1.setVisibility(View.VISIBLE);
         current=p1;
+
     }
 
     public void bt2o(View view){
         current.setVisibility(View.GONE);
         p2.setVisibility(View.VISIBLE);
         current=p2;
-        vview.pause();
+
     }
 
     public void bt3o(View view){
         current.setVisibility(View.GONE);
         p3.setVisibility(View.VISIBLE);
         current=p3;
+
     }
 
     public void bt4o(View view){

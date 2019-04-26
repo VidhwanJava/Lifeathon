@@ -21,7 +21,7 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/logo"
             app:srcCompat="@drawable/life" />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@drawable/btn_bg"
             android:onClick="bt1o"
             android:text="@string/project_1" />
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@drawable/btn_bg"
             android:onClick="bt2o"
             android:text="@string/project_2" />
 
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@drawable/btn_bg"
             android:onClick="bt3o"
             android:text="@string/project_3" />
 
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@drawable/btn_bg"
             android:onClick="bt4o"
             android:text="@string/project_4" />
 
@@ -112,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
+                android:paddingBottom="8dp"
                 android:paddingTop="5dp"
                 android:text="@string/croftbot_string_project_2"
                 android:textAlignment="center"
@@ -144,31 +145,34 @@
 
             </LinearLayout>
 
-            <VideoView
-                android:id="@+id/testved"
-                android:layout_width="930dp"
-                android:layout_height="350dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginStart="250dp"
-                android:layout_marginTop="30dp"
-                android:layout_weight="1"
-                android:paddingLeft="0dp"
-                android:paddingStart="0dp"
-                android:scrollbars="none" />
-
-            <TextView
-                android:id="@+id/textView6"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoText="false"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:singleLine="false"
-                android:text="@string/aries"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_dark"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="false"
+                    android:text="@string/aries"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/robo1" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
@@ -198,6 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
+                android:paddingBottom="8dp"
                 android:paddingTop="5dp"
                 android:text="@string/project_title_string_project_2"
                 android:textAlignment="center"
@@ -213,10 +218,10 @@
                 <ImageView
                     android:id="@+id/img2"
                     android:layout_width="350dp"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/todo"
-                    app:srcCompat="@android:drawable/btn_star_big_on" />
+                    app:srcCompat="@drawable/par" />
 
                 <TextView
                     android:id="@+id/txt."
@@ -224,36 +229,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="2"
-                    android:text="@string/blah"
+                    android:paddingLeft="8dp"
+                    android:text="@string/blah2"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
-
-            <VideoView
-                android:id="@+id/vdo"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scrollbars="none" />
-
-            <ImageView
-                android:id="@+id/img"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:contentDescription="@string/todo"
-                app:srcCompat="@android:drawable/presence_video_away" />
 
             <TextView
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="@string/team_memers_and_college_info"
+                android:paddingBottom="0dp"
+                android:paddingTop="8dp"
+                android:text="@string/Asquares"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
@@ -269,8 +263,10 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -283,6 +279,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
+                android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:text="@string/project_title_string_project_3"
                 android:textAlignment="center"
@@ -290,55 +287,58 @@
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="2"
+                android:padding="8dp"
+                android:paddingLeft="0dp"
+                android:text="@string/blah3"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:baselineAligned="false">
 
                 <ImageView
-                    android:id="@+id/img3"
-                    android:layout_width="350dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@android:drawable/btn_star_big_on" />
+                    android:id="@+id/imageView2"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="10dp"
+                    app:srcCompat="@drawable/rubber" />
 
                 <TextView
-                    android:id="@+id/txt3"
-                    android:layout_width="match_parent"
+                    android:id="@+id/txt2"
+                    android:layout_width="533dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="2"
-                    android:text="@string/blah"
-                    android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:layout_weight="4"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="40dp"
+                    android:text="@string/Ilahia"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-            <VideoView
-                android:id="@+id/vdo3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scrollbars="none" />
-
             <ImageView
-                android:id="@+id/img3.1"
+                android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:contentDescription="@string/todo"
-                app:srcCompat="@android:drawable/presence_video_away" />
-
-            <TextView
-                android:id="@+id/txt3.1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="@string/team_memers_and_college_info"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:layout_height="350dp"
+                android:layout_weight="3"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/rubber2"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="567dp" />
 
         </LinearLayout>
     </ScrollView>
@@ -368,6 +368,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
+                android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:text="@string/project_title_string_project_4"
                 android:textAlignment="center"
@@ -382,11 +383,11 @@
 
                 <ImageView
                     android:id="@+id/im4"
-                    android:layout_width="350dp"
-                    android:layout_height="200dp"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/todo"
-                    app:srcCompat="@android:drawable/btn_star_big_on" />
+                    app:srcCompat="@drawable/lyza" />
 
                 <TextView
                     android:id="@+id/txt4"
@@ -394,25 +395,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="2"
-                    android:text="@string/blah"
+                    android:text="@string/blah4"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
             <VideoView
-                android:id="@+id/video4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scrollbars="none" />
-
-            <ImageView
-                android:id="@+id/img4.1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:contentDescription="@string/todo"
-                app:srcCompat="@android:drawable/presence_video_away" />
+                android:id="@+id/videoView"
+                android:layout_width="990dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:paddingTop="0dp" />
 
             <TextView
                 android:id="@+id/txt4.1"
@@ -420,20 +416,22 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
-                android:text="@string/team_memers_and_college_info"
+                android:text="@string/Lyza"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/expv"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/todo"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
